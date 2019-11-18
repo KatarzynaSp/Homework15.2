@@ -1,18 +1,25 @@
+import java.util.Scanner;
+
 public class Vehicle {
     private String type;
     private String mark;
     private String model;
     private String year;
     private String mileage;
-    private String VIN;
+    private String vin;
+    private static final int NR = 6;
 
-    public Vehicle(String type, String mark, String model, String year, String mileage, String VIN) {
+    public Vehicle(String type, String mark, String model, String year, String mileage, String vin) {
         this.type = type;
         this.mark = mark;
         this.model = model;
         this.year = year;
         this.mileage = mileage;
-        this.VIN = VIN;
+        this.vin = vin;
+    }
+
+    public static int getNR() {
+        return NR;
     }
 
     public String getType() {
@@ -55,16 +62,16 @@ public class Vehicle {
         this.mileage = mileage;
     }
 
-    public String getVIN() {
-        return VIN;
+    public String getVin() {
+        return vin;
     }
 
-    public void setVIN(String VIN) {
-        this.VIN = VIN;
+    public void setVin(String vin) {
+        this.vin = vin;
     }
 
     @Override
     public String toString() {
-        return type + "," + mark + "," + model + "," + year + "," + mileage + "," + VIN + "\n";
+        return type + "," + mark + "," + model + "," + year + "," + mileage + "," + vin + "\n";
     }
 }
