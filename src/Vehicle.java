@@ -1,13 +1,10 @@
-import java.util.Scanner;
-
-public class Vehicle {
+ class Vehicle {
     private String type;
     private String mark;
     private String model;
     private String year;
     private String mileage;
     private String vin;
-    private static final int NR = 6;
 
     public Vehicle(String type, String mark, String model, String year, String mileage, String vin) {
         this.type = type;
@@ -16,10 +13,6 @@ public class Vehicle {
         this.year = year;
         this.mileage = mileage;
         this.vin = vin;
-    }
-
-    public static int getNR() {
-        return NR;
     }
 
     public String getType() {
