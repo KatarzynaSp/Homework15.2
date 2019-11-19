@@ -20,7 +20,7 @@ public class VehicleTest {
         String code;
         do {
             System.out.println("Podaj kod działania");
-             code = scanner.nextLine();
+            code = scanner.nextLine();
             switch (code) {
                 case ("0"):
                     System.out.println("Porgram zakończył działanie.");
@@ -41,12 +41,12 @@ public class VehicleTest {
     }
 
     private static void writeToFile(Queue<Vehicle> vehicleQueue1) throws IOException {
+        BufferedWriter bfw = new BufferedWriter(new FileWriter(new File("Vehicle.csv")));
         while (vehicleQueue1.peek() != null) {
-            BufferedWriter bfw = new BufferedWriter(new FileWriter(new File("Vehicle.csv")));
             bfw.write(String.valueOf(vehicleQueue1.poll()));
-            bfw.flush();
-            bfw.close();
         }
+        bfw.flush();
+        bfw.close();
     }
 
     private static Queue<Vehicle> readFile(BufferedReader bfr) throws IOException {
